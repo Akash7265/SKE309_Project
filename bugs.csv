@@ -1,0 +1,11 @@
+id,title,module,severity,impact,status
+BUG-01,Withdraw allows balance to go negative,withdraw,5,5,Open
+BUG-02,Deposit accepts zero amount,deposit,3,4,Open
+BUG-03,Interest calculated on wrong balance,add_interest,4,4,In Progress
+BUG-04,App crashes on non-numeric deposit input,deposit,4,3,Open
+BUG-05,Negative interest rate not rejected,add_interest,3,3,Fixed
+BUG-06,Balance shows too many decimal places,get_balance,2,2,Open
+BUG-07,Error message has a typo,withdraw,1,1,Open
+BUG-08,Large deposits lose precision,deposit,4,5,Open
+BUG-09,No transaction history is kept,general,2,3,Open
+BUG-10,Account accepts a negative starting balance,init,3,4,Open
