@@ -30,17 +30,18 @@ Manual regression testing takes time, and teams need a consistent way to find fa
 | File | Purpose |
 |------|---------|
 | `app.py` | Sample application: a `BankAccount` class with deposit, withdraw, get_balance and add_interest |
-| `test_app.py` | 13 automated unit and functional tests |
+| `test_app.py` | 22 automated unit and functional tests |
 | `bugs.csv` | 10 simulated bug reports |
 | `prioritize.py` | Calculates priority score and sorts bugs |
 
 ## 6. Test Results
-All 13 tests passed in the first run.
+All 22 tests passed in the first run.
+Test results are logged to `test_log.txt`.
 
 ![Tests passing](screenshots/tests-pass.png)
 
 ### Regression test demonstration
-A deliberate defect was introduced in `deposit()` by changing `+=` to `-=`. Two tests failed (`test_deposit_increases_balance` and `test_multiple_operations`), showing that the automated tests detect the defect. The change was then reverted and all tests passed again.
+A deliberate defect was introduced in `deposit()` by changing `+=` to `-=`. Five tests failed (`test_deposit_increases_balance`, `test_deposit_decimal_amount`, `test_two_deposits`, `test_deposit_then_withdraw_all` and `test_multiple_operations`), while 17 tests passed. This shows that the automated tests detect the defect. The change was then reverted and all 22 tests passed again.
 
 ![Failing tests](screenshots/test-fail.png)
 

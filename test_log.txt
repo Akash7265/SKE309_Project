@@ -1,0 +1,30 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\ACER\AppData\Local\Programs\Python\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ACER\Desktop\SKE309_Project
+collecting ... collected 22 items
+
+test_app.py::test_initial_balance_default PASSED                         [  4%]
+test_app.py::test_initial_balance_custom PASSED                          [  9%]
+test_app.py::test_deposit_increases_balance PASSED                       [ 13%]
+test_app.py::test_deposit_zero_raises_error PASSED                       [ 18%]
+test_app.py::test_deposit_negative_raises_error PASSED                   [ 22%]
+test_app.py::test_withdraw_decreases_balance PASSED                      [ 27%]
+test_app.py::test_withdraw_all_money PASSED                              [ 31%]
+test_app.py::test_withdraw_more_than_balance_raises_error PASSED         [ 36%]
+test_app.py::test_withdraw_negative_raises_error PASSED                  [ 40%]
+test_app.py::test_add_interest PASSED                                    [ 45%]
+test_app.py::test_add_zero_interest PASSED                               [ 50%]
+test_app.py::test_negative_interest_raises_error PASSED                  [ 54%]
+test_app.py::test_multiple_operations PASSED                             [ 59%]
+test_app.py::test_deposit_decimal_amount PASSED                          [ 63%]
+test_app.py::test_two_deposits PASSED                                    [ 68%]
+test_app.py::test_interest_on_zero_balance PASSED                        [ 72%]
+test_app.py::test_interest_fractional_rate PASSED                        [ 77%]
+test_app.py::test_failed_withdraw_keeps_balance PASSED                   [ 81%]
+test_app.py::test_failed_deposit_keeps_balance PASSED                    [ 86%]
+test_app.py::test_get_balance_does_not_change_balance PASSED             [ 90%]
+test_app.py::test_deposit_then_withdraw_all PASSED                       [ 95%]
+test_app.py::test_interest_then_withdraw PASSED                          [100%]
+
+============================= 22 passed in 0.14s ==============================

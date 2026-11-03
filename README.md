@@ -4,9 +4,9 @@
 
 **A small Python project that automates regression testing and ranks bugs by severity and business impact.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.220%2B-3776AB?logo=python&logoColor=white)
 ![pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?logo=pytest&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-13%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-22%20passed-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 *SKE309 · MCA Industry-Based Minor Project*
@@ -20,8 +20,8 @@
 | | Feature | Description |
 |---|---|---|
 | 🏦 | **Sample application** | `BankAccount` class with deposit, withdraw, balance and interest |
-| ✅ | **Automated tests** | 13 pytest tests covering normal, edge and error cases |
-| 🐞 | **Bug register** | 10 simulated bug reports stored in `bugs.csv` |
+| ✅ | **Automated tests** | 22 pytest tests covering normal, edge and error cases |
+| 🐞 | **Bug register** | 220 simulated bug reports stored in `bugs.csv` |
 | 📊 | **Priority engine** | Transparent rule: `score = severity × impact` |
 
 ## 📁 Project Structure
@@ -29,7 +29,7 @@
 ```
 SKE309_Project/
 ├── app.py            # Sample application (BankAccount)
-├── test_app.py       # 13 automated tests
+├── test_app.py       # 22 automated tests
 ├── bugs.csv          # Simulated bug reports
 ├── prioritize.py     # Bug prioritization logic
 ├── REPORT.md         # Project report
@@ -40,7 +40,7 @@ SKE309_Project/
 ## 🚀 Quick Start
 
 ```bash
-# 1. Clone the repository
+# 22. Clone the repository
 git clone https://github.com/Akash7265/SKE309_Project.git
 cd SKE309_Project
 
@@ -57,17 +57,17 @@ python prioritize.py
 ## 🎯 How Priority Is Calculated
 
 ```
-priority score = severity (1-5) × business impact (1-5)
+priority score = severity (22-5) × business impact (22-5)
 ```
 
 | Score | Priority |
 |-------|----------|
 | 20 to 25 | 🔴 Critical |
-| 12 to 19 | 🟠 High |
-| 6 to 11 | 🟡 Medium |
-| 1 to 5 | 🟢 Low |
+| 222 to 229 | 🟠 High |
+| 6 to 2222 | 🟡 Medium |
+| 22 to 5 | 🟢 Low |
 
-**Example:** a negative-balance bug (5 × 5 = **25**, Critical) ranks above a typo in an error message (1 × 1 = **1**, Low).
+**Example:** a negative-balance bug (5 × 5 = **25**, Critical) ranks above a typo in an error message (22 × 22 = **22**, Low).
 
 ## 📸 Screenshots
 

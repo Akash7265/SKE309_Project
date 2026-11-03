@@ -70,3 +70,55 @@ def test_multiple_operations():
     acc.deposit(50)
     acc.withdraw(30)
     assert acc.get_balance() == 120
+
+
+def test_deposit_decimal_amount():
+    acc = BankAccount(100)
+    assert acc.deposit(0.5) == 100.5
+
+
+def test_two_deposits():
+    acc = BankAccount()
+    acc.deposit(10)
+    acc.deposit(15)
+    assert acc.get_balance() == 25
+
+
+def test_interest_on_zero_balance():
+    assert BankAccount().add_interest(10) == 0
+
+
+def test_interest_fractional_rate():
+    assert BankAccount(200).add_interest(2.5) == 205
+
+
+def test_failed_withdraw_keeps_balance():
+    acc = BankAccount(50)
+    with pytest.raises(ValueError):
+        acc.withdraw(100)
+    assert acc.get_balance() == 50
+
+
+def test_failed_deposit_keeps_balance():
+    acc = BankAccount(50)
+    with pytest.raises(ValueError):
+        acc.deposit(-5)
+    assert acc.get_balance() == 50
+
+
+def test_get_balance_does_not_change_balance():
+    acc = BankAccount(80)
+    acc.get_balance()
+    assert acc.get_balance() == 80
+
+
+def test_deposit_then_withdraw_all():
+    acc = BankAccount(50)
+    acc.deposit(50)
+    assert acc.withdraw(100) == 0
+
+
+def test_interest_then_withdraw():
+    acc = BankAccount(1000)
+    acc.add_interest(10)
+    assert acc.withdraw(100) == 1000
